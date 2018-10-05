@@ -1,5 +1,6 @@
 FROM python:3
 RUN apt-get update && apt-get upgrade -y && apt-get autoremove && apt-get autoclean
+RUN pip install --upgrade pip
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
 WORKDIR /code
